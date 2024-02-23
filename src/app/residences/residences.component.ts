@@ -24,5 +24,11 @@ export class ResidencesComponent {
     this.resServ.getAllResidences().subscribe( x => this.listResidences= x );
   }
 
-
+  supprimerR(id:number){
+    this.resServ.deleteResidence(id).subscribe( () => {
+        alert("Residence supprimée avec succès");
+        this.resServ.getAllResidences().subscribe( x => this.listResidences= x );
+    }
+ )
+  }
 }

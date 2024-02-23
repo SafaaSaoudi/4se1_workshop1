@@ -16,10 +16,15 @@ export class AddResidenceComponent {
 
 
   ajoutResidence(){
-    this.resServ.addResidence(this.residence).subscribe( (x) => {
+    this.resServ.addResidence(this.residence).subscribe( 
+    (x) => {
       alert("Residence"+ x.name + " ajoutée avec succès");
       this.R.navigateByUrl("residences");
-    }
+    }, 
+    
+    (err) => alert("Erreur lors de l'ajout"), 
+
+    () => alert("Ajout terminé")
     );
   }
 }

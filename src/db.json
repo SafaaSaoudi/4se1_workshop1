@@ -23,12 +23,6 @@
       "name": "El Anber",
       "address": "Manzah 5",
       "image": "../../assets/images/R4.jpg"
-    },
-    {
-      "id": 5,
-      "name": "Nouvelle Rsidence",
-      "address": "Ariana",
-      "image": "../../assets/images/R4.jpg"
     }
   ]
 }
