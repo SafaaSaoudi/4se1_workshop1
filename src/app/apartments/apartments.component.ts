@@ -23,6 +23,7 @@ export class ApartmentsComponent {
   ];
 
   constructor(private actR:ActivatedRoute){}
+ 
 
   idResidence!:number;
   ngOnInit(){
