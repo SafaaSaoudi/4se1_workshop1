@@ -21,8 +21,8 @@ export class ResidenceService {
     return this.http.get<Residence>(this.URL+"/"+id); 
   }
 
-  addResidence(R:Residence){
-    return  this.http.post<Residence>(this.URL, R);
+  addResidence(R:any){
+    return  this.http.post(this.URL, R);
   }
 
   updateResidence(id:number, R:Residence){

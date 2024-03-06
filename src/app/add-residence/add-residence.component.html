@@ -1,3 +1,17 @@
 
 <h2>Add new Residence</h2>
-<button type="submit" class="btn btn-primary" (click)="ajoutResidence()"> Add Residence</button>
+
+<form  [formGroup]="addForm">
+name: <input type="text"   formControlName="name"> 
+<span class="text-danger" *ngIf="name?.errors?.['required'] && name?.touched" >Name is required</span>
+<span class="text-danger" *ngIf="name?.errors?.['minlength'] && name?.touched" >Name must be at least 3 carcaters</span>
+
+<br>
+
+address: <input type="text" formControlName="address"><br>
+image: <input type="file" formControlName="image">
+skills: <input type="text" formControlName="skills">
+<button type="submit" class="btn btn-primary" (click)="ajoutResidence()" [disabled]="addForm.invalid"> Add Residence</button>
+</form>
+
+
